@@ -14,7 +14,7 @@ function doGet(e) {
 function doPost(e) {
     // POST Resource
     // for debug, using curl command
-    // curl -Ss -H "Content-Type: application/json; charset=utf-8" -d '{"title": "テスト", "description": "てすとです。"}' -L ${RESOURCE_URL}"
+    // curl -H "Content-Type: application/json; charset=utf-8" -d '{"title": "テスト", "description": "てすとです。"}' -SsL ${RESOURCE_URL}"
     const params = JSON.parse(e.postData.getDataAsString());
     const formUrl = test({
         'title': params.title,
